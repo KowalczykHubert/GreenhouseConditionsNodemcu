@@ -20,8 +20,6 @@ Adafruit_BME280 bme;                   // I2C Create an object of Adafruit_BME28
 
 //BlynkTimer timer;           // Create an object of BlynkTimer class
 char auth[] = APIKEY; // You should get Auth Token in the Blynk App.
-// Go to the Project Settings (nut icon).
-
 char ssid[] = SSIDHOME; // Your WiFi credentials.
 char pass[] = PASSHOME; // Set password to "" for open networks.
 
@@ -97,7 +95,7 @@ void setup()
 
   // Wait for serial to initialize.
   Serial.println("Going into deep sleep for 20 seconds");
-  ESP.deepSleep(seconds + 1000000); // 20e6 is 20 microseconds
+  ESP.deepSleep(seconds + 10000000); // 20e6 is 20 microseconds
 }
 
 void loop()
