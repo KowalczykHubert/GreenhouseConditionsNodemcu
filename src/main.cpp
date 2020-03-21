@@ -94,8 +94,11 @@ void setup()
   checkWeather();
 
   // Wait for serial to initialize.
-  Serial.println("Going into deep sleep for 20 seconds");
-  ESP.deepSleep(seconds + 10000000); // 20e6 is 20 microseconds
+  Serial.print("Going into deep sleep for ");
+  Serial.print(seconds);
+  Serial.println(" seconds");
+  ESP.deepSleep(seconds * 1000000); // deep sleep time
+  Serial.println ("This shouldn't be printed");
 }
 
 void loop()
